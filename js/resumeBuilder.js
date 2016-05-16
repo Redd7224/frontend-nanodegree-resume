@@ -29,23 +29,26 @@ var bio = {
 	"bioPic": "images/fry.jpg"
 };
 
-var workInfo = {
-	"currentJob": {
-		"position": "Senior Support Engineer",
-		"locCity": "New Haven",
-		"locState": "CT",
-		"yearsWorked": 2
-	},
-};
+// Adding a javascript object via dot notation
+var workInfo = {};
 
-var educationInfo = {
-	
+workInfo.position = "Senior Software Support Engineer";
+workInfo.employer = "Square 9 Softworks";
+workInfo.years = 2;
+workInfo.locCity = "New Haven";
+workInfo.locState = "CT";
 
-};
+// Adding a javascript object via bracket notation
+var educationInfo = {};
 
+educationInfo["lastSchool"] = "New England Institue of Technology";
+educationInfo["degree"] = "Game Development and Simulation Programming";
+educationInfo["yearsAttended"] = "2009 - 2012";
+educationInfo["cityLocation"] = "Warwick";
+educationInfo["stateLocation"] = "RI";
+
+// needs to be fixed stil.
 HTMLbioPic.src = bio.bioPic;
-
-// changed me - NOW
 
 $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
@@ -53,10 +56,10 @@ $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
 $("#header").append(HTMLbioPic.src = bio.bioPic);
 
 $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
-
 $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
 $("#header").append(HTMLmobile.replace("%data%", bio.contacts.mobile));
-
-
-
-//$("#header").append(HTMLcontactGeneric.replace("%data%", bio.contacts));
+$("#header").append(HTMLworkEmployer.replace("%data%", workInfo.employer));
+$("#header").append(HTMLworkTitle.replace("%data%", workInfo.position));
+$("#header").append(HTMLworkDates.replace("%data%", workInfo.years));
+$("#header").append(HTMLschoolName.replace("%data%", educationInfo["lastSchool"]));
+$("#header").append(HTMLschoolDegree.replace("%data%", educationInfo["degree"]));
