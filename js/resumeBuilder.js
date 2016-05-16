@@ -45,6 +45,8 @@ var educationInfo = {
 
 HTMLbioPic.src = bio.bioPic;
 
+// changed me - NOW
+
 $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
 
