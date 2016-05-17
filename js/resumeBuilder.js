@@ -53,7 +53,7 @@ HTMLbioPic.src = bio.bioPic;
 $("#header").prepend(HTMLheaderName.replace("%data%", bio.name));
 $("#header").append(HTMLheaderRole.replace("%data%", bio.role));
 
-$("#header").append(HTMLbioPic.src = bio.bioPic);
+$(".biopic").append(HTMLbioPic.src = bio.bioPic);
 
 $("#header").append(HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage));
 $("#header").append(HTMLemail.replace("%data%", bio.contacts.email));
